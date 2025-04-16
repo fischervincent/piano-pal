@@ -1,11 +1,8 @@
-import MicListener from './MicListener';
+import React from "react";
+import AppRouter from "./router";
 
-const App = () => {
-  return (
-    <div className="min-h-screen bg-slate-50 text-gray-800 flex items-center justify-center">
-      <MicListener />
-    </div>
-  );
+const App: React.FC = () => {
+  return <AppRouter />;
 };
 
 export default App;
