@@ -13,6 +13,8 @@
     "@radix-ui/react-slot": "^1.2.0",
     "@tailwindcss/vite": "^4.1.4",
     "autoprefixer": "^10.4.21",
+    "fast-xml-parser": "^5.2.1",
+    "fflate": "^0.8.2",
     "lucide-react": "^0.488.0",
     "pitchfinder": "^2.3.2",
     "pitchy": "^4.1.0",
@@ -21,6 +23,7 @@
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.5.0",
     "tailwindcss": "^4.1.4",
+    "uuid": "^11.1.0",
     "vexflow": "^5.0.0"
   },
   "devDependencies": {

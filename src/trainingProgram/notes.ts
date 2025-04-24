@@ -1,5 +1,10 @@
 export type Note = string; // e.g. "C4", "D#4"
 
+export type NoteWithHand = {
+  note: Note
+  hand?: 'left' | 'right'
+}
+
 const solfegeMap: Record<string, string> = {
   'C': 'do', 'C#': 'di', 'D': 're', 'D#': 'ri', 'E': 'mi',
   'F': 'fa', 'F#': 'fi', 'G': 'sol', 'G#': 'si',

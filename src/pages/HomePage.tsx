@@ -4,6 +4,8 @@ import { Button } from '../components/ui/Button'
 
 import { TRAINING_PROGRAMS } from "@/trainingProgram/trainingPrograms";
 import { TrainingSessionCard } from "@/trainingProgram/components/TrainingSessionCard";
+import { Link } from "react-router-dom";
+import { ROUTES } from "@/router";
 
 const HomePage: React.FC = () => {
   return (
@@ -118,6 +120,21 @@ const HomePage: React.FC = () => {
                   </p>
                 </div>
               </div>
+            </div>
+          </div>
+          <div className="container px-4 md:px-6 py-12 max-w-5xl">
+            <div className="rounded-lg border bg-card p-6 text-center">
+              <h2 className="text-2xl font-semibold mb-4">
+                Upload Your Own Music
+              </h2>
+              <p className="text-muted-foreground mb-6">
+                Use a MIDI or MusicXML file to generate custom training
+                exercises based on your own sheet music.
+              </p>
+              <Button size="lg">
+                <Link to={ROUTES.upload()}>Upload MIDI or MusicXML</Link>
+                <ChevronRight className="ml-2 h-4 w-4" />
+              </Button>
             </div>
           </div>
         </section>

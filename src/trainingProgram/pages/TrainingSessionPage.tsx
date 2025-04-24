@@ -1,5 +1,4 @@
 import { useParams } from "react-router-dom";
-import { usePitchDetection } from "../hooks/usePitchDetection";
 import { TRAINING_PROGRAMS } from "../trainingPrograms";
 import { Music } from "lucide-react";
 import Trainer from "../components/Trainer";

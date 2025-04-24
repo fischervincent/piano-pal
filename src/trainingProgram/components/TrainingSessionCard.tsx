@@ -3,6 +3,7 @@ import { Badge, Clock } from 'lucide-react'
 import { Button } from '@/components/ui/Button';
 import { Link } from 'react-router-dom'
 import { TrainingProgram } from "@/trainingProgram/trainingPrograms";
+import { ROUTES } from "@/router";
 
 export const TrainingSessionCard = ({
   title,
@@ -40,7 +41,7 @@ export const TrainingSessionCard = ({
           {duration}
         </div>
         <Button size="sm" variant="primary" asChild>
-          <Link to={`/session/${trainingSessionId}`}>Start</Link>
+          <Link to={ROUTES.trainingSession(trainingSessionId)}>Start</Link>
         </Button>
       </CardFooter>
     </Card>

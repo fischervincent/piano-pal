@@ -1,13 +1,13 @@
-import { Note, noteNameToSemitone } from "./notes";
+import { NoteWithHand, noteNameToSemitone } from "./notes";
 import { noteToMidi } from "./notes"
 
 export type TrainingProgram = {
   id: string;
   name: string;
   description: string;
-  difficulty: 'Beginner' | 'Intermediate' | 'Advanced';
-  notes: Note[];
-  notesToStartWith: Note[];
+  difficulty: 'Beginner' | 'Intermediate' | 'Advanced' | 'Custom';
+  notes: NoteWithHand[];
+  notesToStartWith: NoteWithHand[];
 };
 
 export const TRAINING_PROGRAMS: TrainingProgram[] = [
@@ -16,32 +16,32 @@ export const TRAINING_PROGRAMS: TrainingProgram[] = [
     name: 'Basic Octaves',
     description: 'Learn the same note in different octaves and its solfège.',
     difficulty: 'Beginner',
-    notes: ['C4', 'C5', 'D4', 'D5', 'E4', 'E5', 'F4', 'F5'],
-    notesToStartWith: ['C4', 'D4', 'E4']
+    notes: [{ note: 'C4' }, { note: 'C5' }, { note: 'D4' }, { note: 'D5' }, { note: 'E4' }, { note: 'E5' }, { note: 'F4' }, { note: 'F5' }],
+    notesToStartWith: [{ note: 'C4' }, { note: 'D4' }, { note: 'E4' }]
   },
   {
     id: 'program2',
     name: 'Basic Major Scale',
     description: 'Learn the notes of a major scale from C to C.',
     difficulty: 'Beginner',
-    notes: ['C4', 'D4', 'E4', 'F4', 'G4', 'A4', 'B4', 'C5'],
-    notesToStartWith: ['C4', 'D4', 'E4']
+    notes: [{ note: 'C4' }, { note: 'D4' }, { note: 'E4' }, { note: 'F4' }, { note: 'G4' }, { note: 'A4' }, { note: 'B4' }, { note: 'C5' }],
+    notesToStartWith: [{ note: 'C4' }, { note: 'D4' }, { note: 'E4' }]
   },
   {
     id: 'program3',
     name: 'C Natural Minor Scale',
     description: 'Learn the notes of the C natural minor scale, starting from C.',
     difficulty: 'Intermediate',
-    notes: ['C4', 'D4', 'Eb4', 'F4', 'G4', 'Ab4', 'Bb4', 'C5'],
-    notesToStartWith: ['C4', 'Eb4', 'G4']
+    notes: [{ note: 'C4' }, { note: 'D4' }, { note: 'Eb4' }, { note: 'F4' }, { note: 'G4' }, { note: 'Ab4' }, { note: 'Bb4' }, { note: 'C5' }],
+    notesToStartWith: [{ note: 'C4' }, { note: 'Eb4' }, { note: 'G4' }]
   },
   {
     id: 'program4',
     name: 'C Harmonic Minor Scale',
-    description: 'Learn the notes of the C harmonic minor scale, starting from C.',
+    description: 'Learn the notes of the C harmonic{note:  minor scale}, starting from C.',
     difficulty: 'Intermediate',
-    notes: ['C4', 'D4', 'Eb4', 'F4', 'G4', 'Ab4', 'B4', 'C5'],
-    notesToStartWith: ['C4', 'Eb4', 'G4']
+    notes: [{ note: 'C4' }, { note: 'D4' }, { note: 'Eb4' }, { note: 'F4' }, { note: 'G4' }, { note: 'Ab4' }, { note: 'B4' }, { note: 'C5' }],
+    notesToStartWith: [{ note: 'C4' }, { note: 'Eb4' }, { note: 'G4' }]
   }  
 ] as const;
 
